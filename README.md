@@ -4,16 +4,17 @@
 
 ## **Quest was created with:**
 
-NodeJS      
-ExpressJS
-React       
-Redux
-PostgreSQL  
-Sequelize
-Bootstrap   
-Enzyme
-Stripe      
-PassportJS
+- NodeJS      
+- ExpressJS
+- React       
+- Redux
+- PostgreSQL  
+- Sequelize
+- Bootstrap   
+- Enzyme
+- Mocha
+- Stripe      
+- PassportJS
 
 
 
