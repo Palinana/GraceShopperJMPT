@@ -8,7 +8,7 @@ import { refreshCart } from '../store/cart'
 const Navbar = ({ handleClick, isLoggedIn, isAdmin }) => (
   <div className="nav-panel">
     <div className="logo">
-    <Link to="/"><img alt="logo" src="/images/compass.png" /></Link>
+      <Link to="/"><img alt="logo" src="/images/compass.png" /></Link>
     </div>
     <nav>
       {isLoggedIn ? (
@@ -34,7 +34,6 @@ const Navbar = ({ handleClick, isLoggedIn, isAdmin }) => (
           </div>
         )}
     </nav>
-    {/* <hr /> */}
   </div>
 )
 

@@ -49,12 +49,12 @@ class Cart extends Component {
                 {
                     this.props.cart && this.props.cart.map(item => {
                         return (
-                            <button
+                            <button className="delete-btn"
                                     type="button"
                                     onClick={() => this.props.deleteItem(item.id)}>
                                     Delete {item.quantity} tickets to {item.trip}
-                                </button>)
-                })
+                            </button>)
+                        })
                 }
                 <Link className='order-link' to="/orders"><h3 className='order-history'>See Order History</h3></Link>
                 <h4 className='total'>Your Total: {
@@ -66,12 +66,12 @@ class Cart extends Component {
                 }
                 </h4>
                 <Checkout
-                name="hello"
-                description="goodbye"
-                cartId={this.props.cart.id}
-                amount={this.props.cart.reduce((acc, curr) => {
-                    return acc + curr.subTotal
-                }, 0)}
+                    name="hello"
+                    description="goodbye"
+                    cartId={this.props.cart.id}
+                    amount={this.props.cart.reduce((acc, curr) => {
+                        return acc + curr.subTotal
+                    }, 0)}
                 />
             </div>
         )
@@ -83,7 +83,6 @@ const mapState = state => {
         state: state,
         cart: state.cart,
         trips: state.cart.trips,
-        // orderId: state.cart.trips.map(trip => trip.orderId)
     }
 }
 
@@ -100,11 +99,3 @@ const mapDispatch = (dispatch) => {
 
 export default connect(mapState, mapDispatch)(Cart);
 
-// <TableHeaderColumn
-//     dataField='id'
-//     dataAlign='center'
-//     headerAlign='center'
-//     width='20%'
-//     dataFormat={this.cellButton}>
-//     Remove
-//                     </TableHeaderColumn>

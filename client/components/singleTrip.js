@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Container, Row, Col } from 'reactstrap';
 import { fetchSingleTrip } from '../store/trips';
 import { fetchAllFromCart, postNewItem } from '../store/cart';
 import EditTrip from './editTrip';
@@ -13,7 +13,6 @@ class SingleTrip extends Component {
       }
       this.handleChange = this.handleChange.bind(this)
     }
-
 
     componentDidMount(){
         this.props.getSingleTrip(this.props.match.params.id);
@@ -65,33 +64,34 @@ class SingleTrip extends Component {
                 <h6>{trip.inventory} left!</h6>
                 <EditTrip history={this.props.history} />
               </div>}
+              
           </div>
         )
-      }
     }
+}
 
-    const mapState = state => {
-      return {
-        selectedTrip: state.selectedTrip,
-        isAdmin: state.user.isAdmin,
-        cart: state.cart,
-        user: state.user
-      }
+const mapState = state => {
+  return {
+    selectedTrip: state.selectedTrip,
+    isAdmin: state.user.isAdmin,
+    cart: state.cart,
+    user: state.user
+  }
+}
+
+const mapDispatch = dispatch => {
+  return {
+    getSingleTrip: (id) => {
+      dispatch(fetchSingleTrip(id));
+    },
+    getAllFromCart: (userId) => {
+      dispatch(fetchAllFromCart(userId));
+    },
+    addToCart: (newItem, evt) => {
+      evt.preventDefault()
+      dispatch(postNewItem(newItem))
     }
+  }
+}
 
-    const mapDispatch = dispatch => {
-     return {
-       getSingleTrip: (id) => {
-         dispatch(fetchSingleTrip(id));
-       },
-       getAllFromCart: (userId) => {
-         dispatch(fetchAllFromCart(userId));
-       },
-       addToCart: (newItem, evt) => {
-         evt.preventDefault()
-         dispatch(postNewItem(newItem))
-       }
-     }
-    }
-
-    export default connect(mapState, mapDispatch)(SingleTrip)
+export default connect(mapState, mapDispatch)(SingleTrip)

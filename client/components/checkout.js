@@ -31,8 +31,8 @@ const onToken = (amount, cartId) => token => {
 
 const Checkout = ({amount, cartId}) => {
     return (
-        <div>
-        {console.log("Total?", amount)}
+        <div className="pay-btn">
+        {/* {console.log("Total?", amount)} */}
         <StripeCheckout
             amount={amount}
             token={onToken(amount)}

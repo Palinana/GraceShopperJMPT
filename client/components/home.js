@@ -21,7 +21,6 @@ const Home = (props) => {
                     </div>
                 </div>
             </header>
-            {/* <hr /> */}
             <section className="featured-quests text-center">
                 <h2 className="featured-quests-title">Featured Quests</h2>
                 {props.trips.length &&
@@ -62,12 +61,12 @@ const mapState = state => {
     }
 }
 
-  const mapDispatch = dispatch => {
-   return {
-     getAllTrips: () => {
-       dispatch(fetchAllTrips());
-     }
-   }
+const mapDispatch = dispatch => {
+    return {
+        getAllTrips: () => {
+            dispatch(fetchAllTrips());
+        }
+    }
 }
 
 export default connect(mapState, mapDispatch)(Home);

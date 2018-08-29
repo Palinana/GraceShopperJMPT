@@ -69,9 +69,10 @@ form div {
 }
 
 .search{
-  justify-content: flex-start ;
-  margin-right: 63%;
+  margin: auto;
+  display: block;
 }
+
 .no-match{
   font-size: 2em;
 }
@@ -90,6 +91,9 @@ form div {
     text-align: center;
     margin-left: 35%;
     margin-top: 40px;
+}
+.mt {
+  margin-top: 5% !important;
 }
 /* .main-img{
  
@@ -129,9 +133,6 @@ form div {
 .checkout:hover {
   background:rgb(238, 221, 186);
 }
-/* .nav-panel{
-  background-color: #eee;
-} */
 
 /* HOMEPAGE */
 /* HEADER */
@@ -161,6 +162,18 @@ header.home-welcome {
   font-size: 2rem;
   color: white;
 
+}
+.img-thumbnail{
+  height: 490px;
+}
+
+.trip-image{
+  width: 280px;
+  height: 340px;
+}
+.card-deck{
+  margin: 0;
+  margin-bottom: 20px;
 }
 /* margin: 0 */
 .no-gutters {
@@ -214,14 +227,17 @@ ul{
   color: black;
 }
 .sidebar-category{
-  margin-bottom: 40px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.4em;
 }
 .sidebar-trips:hover{
   color: rgb(148, 144, 144);
   text-decoration: none;
 }
-.no-match{
-
+.sider{
+  margin-left: 4rem;
+  color: #0d0e0d;
 }
 /* FEATURED QUESTS */
 /* add 2 last */
@@ -249,8 +265,9 @@ ul{
 }
 
 .order-history{
-  font-size: 1.3rem;
-  margin-left: 40px;
+  font-size: 1em;
+  margin-left: 27px;
+  color: #a79c9c;
 }
 .order-link:link {
   color: black;
@@ -274,4 +291,15 @@ ul{
   display: flex;
   margin: 40px;
   justify-content: space-around;
+}
+.pay-btn{
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.delete-btn{
+  margin-left: 17px;
+  border: none;
+  padding: 10px;
+  color: #ad1111;
 }
