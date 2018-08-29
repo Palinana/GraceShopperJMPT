@@ -114,9 +114,9 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
  return {
-   getAllTrips: () => {
-     dispatch(fetchAllTrips());
-   }
+    getAllTrips: () => {
+      dispatch(fetchAllTrips());
+    }
  }
 }
 
